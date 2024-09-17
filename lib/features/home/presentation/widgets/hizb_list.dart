@@ -68,8 +68,11 @@ class HizbListView extends StatelessWidget {
                       })
                     : List.generate(
                         1,
-                        (index) => Center(
-                              child: CircularProgressIndicator(),
+                        (index) => const Padding(
+                              padding: EdgeInsets.all(20.0),
+                              child: Center(
+                                child: CircularProgressIndicator(),
+                              ),
                             )));
           },
           separatorBuilder: (context, index) => const CustomDivider(),
