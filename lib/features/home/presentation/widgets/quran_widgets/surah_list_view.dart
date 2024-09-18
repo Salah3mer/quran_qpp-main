@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran_qpp/config/router/routes.dart';
 import 'package:quran_qpp/core/helper/widget/custom_divider.dart';
 import 'package:quran_qpp/features/home/presentation/cubit/home_cubit.dart';
-import 'package:quran_qpp/features/home/presentation/widgets/surah_item.dart';
+import 'package:quran_qpp/features/home/presentation/widgets/quran_widgets/surah_item.dart';
 
 class SurahListView extends StatelessWidget {
   const SurahListView({

@@ -6,7 +6,7 @@ import 'package:quran_qpp/config/style/app_font.dart';
 import 'package:quran_qpp/core/helper/extension.dart';
 import 'package:quran_qpp/core/helper/widget/custom_divider.dart';
 import 'package:quran_qpp/features/home/presentation/cubit/home_cubit.dart';
-import 'package:quran_qpp/features/home/presentation/widgets/surah_item.dart';
+import 'package:quran_qpp/features/home/presentation/widgets/quran_widgets/surah_item.dart';
 
 class JuzListView extends StatelessWidget {
   const JuzListView({

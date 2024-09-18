@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quran_qpp/core/helper/extension.dart';
+import 'package:quran_qpp/core/helper/func/func.dart';
 import 'package:quran_qpp/core/helper/widget/custom_textformfield.dart';
 import 'package:quran_qpp/features/surah/presentation/widgets/verse%20.dart';
 
@@ -73,19 +74,23 @@ class _SurahViewState extends State<SurahView> {
 
   // Filter ayahs based on search query
   void _filterAyahs(String query) {
-    if (query.isEmpty) {
-      setState(() {
+    setState(() {
+      // Check if the query is empty
+      if (query.isEmpty) {
         filteredAyahs = widget.surahs.array!;
-      });
-    } else {
-      setState(() {
+      } else if (RegExp(r'[\u0600-\u06FF]').hasMatch(query)) {
+        // If the query contains Arabic characters
         filteredAyahs = widget.surahs.array!
-            .where((ayah) => ayah.en!
-                .toLowerCase()
-                .contains(query)) // Filter based on ayah content
+            .where((ayah) => Func.removeTashkeel(ayah.ar!).contains(query))
             .toList();
-      });
-    }
+      } else {
+        // If the query is in English
+        filteredAyahs = widget.surahs.array!
+            .where(
+                (ayah) => ayah.en!.toLowerCase().contains(query.toLowerCase()))
+            .toList();
+      }
+    });
   }
 
   @override

@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quran_qpp/config/style/app_font.dart';
 import 'package:quran_qpp/core/app_images.dart';
-import 'package:quran_qpp/features/home/presentation/widgets/tab_bar.dart';
+import 'package:quran_qpp/features/home/presentation/widgets/quran_widgets/tab_bar.dart';
 
 class QuranWidgetView extends StatelessWidget {
   const QuranWidgetView({

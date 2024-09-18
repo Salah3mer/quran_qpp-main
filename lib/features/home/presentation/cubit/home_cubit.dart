@@ -15,7 +15,7 @@ import 'package:quran_qpp/features/home/data/repository/home_repo_impl.dart';
 import 'package:quran_qpp/features/home/presentation/widgets/bookmark_widget_view.dart';
 import 'package:quran_qpp/features/home/presentation/widgets/dowaa_widget_view.dart';
 import 'package:quran_qpp/features/home/presentation/widgets/pray_widget_view.dart';
-import 'package:quran_qpp/features/home/presentation/widgets/quran_widget_view.dart';
+import 'package:quran_qpp/features/home/presentation/widgets/quran_widgets/quran_widget_view.dart';
 
 part 'home_state.dart';
 

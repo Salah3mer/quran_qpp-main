@@ -7,7 +7,7 @@ import 'package:quran_qpp/core/helper/widget/custom_divider.dart';
 import 'package:quran_qpp/core/helper/widget/custom_textformfield.dart';
 import 'package:quran_qpp/features/home/data/models/surah_model/surah_model.dart';
 import 'package:quran_qpp/features/home/presentation/cubit/home_cubit.dart';
-import 'package:quran_qpp/features/home/presentation/widgets/surah_item.dart';
+import 'package:quran_qpp/features/home/presentation/widgets/quran_widgets/surah_item.dart';
 
 class SearchView extends StatefulWidget {
   final SurahModel surah;

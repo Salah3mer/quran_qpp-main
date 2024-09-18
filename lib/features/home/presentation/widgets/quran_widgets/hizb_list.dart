@@ -4,7 +4,7 @@ import 'package:quran_qpp/config/style/app_colors.dart';
 import 'package:quran_qpp/config/style/app_font.dart';
 import 'package:quran_qpp/core/helper/widget/custom_divider.dart';
 import 'package:quran_qpp/features/home/presentation/cubit/home_cubit.dart';
-import 'package:quran_qpp/features/home/presentation/widgets/surah_item.dart';
+import 'package:quran_qpp/features/home/presentation/widgets/quran_widgets/surah_item.dart';
 import 'package:quran_qpp/features/surah/presentation/widgets/verse%20.dart';
 
 class HizbListView extends StatelessWidget {
@@ -28,7 +28,7 @@ class HizbListView extends StatelessWidget {
                 title: Row(
                   children: [
                     Text(
-                      'الحزب ${index + 1}',
+                      'الربع  ${index + 1}',
                       style: AppFont.fontHafs20BoldColorWhite(context),
                     ),
                   ],

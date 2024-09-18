@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:quran_qpp/config/style/app_font.dart';
-import 'package:quran_qpp/features/home/presentation/widgets/hizb_list.dart';
-import 'package:quran_qpp/features/home/presentation/widgets/juz_list.dart';
-import 'package:quran_qpp/features/home/presentation/widgets/surah_list_view.dart';
+
+import 'package:quran_qpp/features/home/presentation/widgets/quran_widgets/hizb_list.dart';
+import 'package:quran_qpp/features/home/presentation/widgets/quran_widgets/juz_list.dart';
+import 'package:quran_qpp/features/home/presentation/widgets/quran_widgets/surah_list_view.dart';
 
 class TabBarWidget extends StatelessWidget {
   const TabBarWidget({super.key});
@@ -10,7 +11,7 @@ class TabBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 3,
       child: SizedBox(
         height: MediaQuery.of(context).size.height * .45,
         child: Column(
@@ -34,14 +35,12 @@ class TabBarWidget extends StatelessWidget {
                       case 0:
                       case 1:
                       case 2:
-                      case 3:
                     }
                   },
                   tabs: const [
                     Tab(child: Text('Surah')),
                     Tab(child: Text('Juz')),
-                    Tab(child: Text('Hizb')),
-                    Tab(child: Text('Hijri')),
+                    Tab(child: Text('Quarter')),
                   ]),
             ),
             const Expanded(
@@ -49,7 +48,6 @@ class TabBarWidget extends StatelessWidget {
                 SurahListView(),
                 JuzListView(),
                 HizbListView(),
-                Center(child: Text('Hijri Content')),
               ]),
             )
           ],
